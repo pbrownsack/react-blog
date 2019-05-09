@@ -6,6 +6,7 @@ import SideBar from './components/SideBar';
 import PageView from './components/PageView';
 import HomePage from './containers/Home';
 import ProjectsPage from './containers/Projects';
+import AdminPage from './containers/Admin';
 import './App.css';
 
 const App = (props) => {
@@ -18,6 +19,7 @@ const App = (props) => {
             <PageView>
               <Route exact path="/" component={HomePage} />
               <Route path="/projects" component={ProjectsPage} />
+              <Route path="/admin" component={AdminPage} />
             </PageView>
           </div>
         </Router>
