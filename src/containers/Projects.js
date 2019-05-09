@@ -10,7 +10,7 @@ const Projects = () => {
             <Header>
                 <i class="fas fa-book"></i>
                 <HeaderText>
-                    <h1>My personal projects, showcased for you.</h1>
+                    <h2>My personal projects, showcased for you.</h2>
                     <p>All of my personal projects including code, music, and other cool stuff will be here.</p>
                 </HeaderText>
             </Header>
