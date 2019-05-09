@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    padding: 12px;
+    background-color: #fff;
+    margin-bottom: 8px;
+
+    img {
+        width: 64px;
+        height: 64px;
+        margin-right: 12px;
+    }
+}
+
+.card-info h4 {
+    font-size: 18px;
+}
+
+.card-info p {
+    color: rgb(125, 125, 125);
+}

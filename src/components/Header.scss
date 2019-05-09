@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    min-height: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+
+    i {
+        font-size: 36px;
+        margin-right: 16px;
+    }
+
+    p {
+        margin-top: 4px;
+        color: rgb(125, 125, 125);
+    }
+}
+
+.header-text {
+    display: inline;
+}

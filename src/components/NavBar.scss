@@ -1,0 +1,92 @@
+$primary-color: #222;
+$hover-color: rgba(255, 255, 255, 1);
+$light-color: rgba(255, 255, 255, 0.8);
+
+.nav {
+    position: fixed;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding: 0 20%;
+    background-color: $primary-color;
+}
+
+.nav-brand {
+    font-weight: 600;
+    color: $light-color;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    list-style-type: none;
+}
+
+.nav-list a {
+    color: $light-color;
+    padding: 14px;
+    text-decoration: none;
+    transition: 0.2s;
+
+    .active {
+        border: 2px solid $light-color;
+    }
+}
+
+.nav-list a:hover {
+    color: $hover-color;
+}
+
+.nav-search-container {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    align-self: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #353535;
+    transition: width 0.3s;
+
+    i {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        color: $light-color;
+    }
+}
+
+.nav-search {
+    color: $light-color;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    padding-left: 30px;
+    height: 40px;
+}
+
+.nav-search:focus {
+    outline: none;
+}
+
+.nav-btn {
+    font-size: 16px;
+    height: 75%;
+    align-self: center;
+    width: 100px;
+    margin-left: 10px;
+    color: rgb(91, 162, 255);
+    border: 1px solid rgb(91, 162, 255);
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-btn:focus {
+    outline: none;
+}

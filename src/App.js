@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import SideBar from './components/SideBar';
+import PageView from './components/PageView';
+import HomePage from './containers/Home';
+import ProjectsPage from './containers/Projects';
 import './App.css';
-
-const Sack = () => {
-  return <h1>Hey there. Goodbye!</h1>
-}
 
 const App = (props) => {
   return (
       <Provider store={props.store}>
         <Router>
           <div className="App">
-            <h1>Eat my ass</h1>
+            <SideBar />
+
+            <PageView>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/projects" component={ProjectsPage} />
+            </PageView>
           </div>
         </Router>
       </Provider>
