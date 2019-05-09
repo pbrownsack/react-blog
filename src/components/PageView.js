@@ -1,6 +1,7 @@
 import React from 'react';
 
 const styles = {
+    position: 'relative',
     minHeight: '100vh',
     width: '85%',
     margin: '0 15%',
