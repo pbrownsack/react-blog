@@ -12,11 +12,6 @@
     box-shadow: 0 0 10px rgba(#000, 0.1);
 }
 
-.admin h3 {
-    font-size: 28px;
-    font-weight: 400;
-}
-
 .admin input {
     font-size: 18px;
     text-align: center;
@@ -31,12 +26,18 @@
 }
 
 .admin input[type=submit] {
-    margin-top: 20px;
-    background-color: purple;
-    border: none;
-    color: #fff;
+    margin-top: 12px;
+    background: none;
+    color: rgb(200, 200, 200);
+    background-color: #312450;
     padding: 12px;
     font-size: 18px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    transition: all ease-out 0.2s;
+    cursor: pointer;
+}
+
+.admin input[type=submit]:hover {
+    color: #fff;
 }
