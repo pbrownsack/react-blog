@@ -9,11 +9,11 @@
 
 .stats-row {
     display: flex;
+    justify-content: space-between;
 
     .card {
         flex-direction: column;
-        margin: 0 4px;
-        width: 100%;
+        width: 33%;
         height: 100px;
         box-shadow: 0 0 10px rgba(#000, 0.1);
     }
@@ -28,7 +28,7 @@
     }
 
     .card p {
-        font-size: 36px;
+        font-size: 34px;
         font-weight: 600;
         margin-top: auto;
         align-self: flex-start;

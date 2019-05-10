@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
+import GameList from '../components/GameList';
 import './Games.scss';
 
 const Games = () => {
-    let uri = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=0D2DF50D571E2341FC2EFACB90C0E720&steamid=76561198057933638&format=json&include_appinfo=1"
-    let proxy = "https://cors-anywhere.herokuapp.com/";
     const [games, setGames] = useState([]);
     const [hours, setHours] = useState(0);
     const [mostPlayed, setMostPlayed] = useState({});
 
     useEffect(() => {
+        let uri = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=0D2DF50D571E2341FC2EFACB90C0E720&steamid=76561198057933638&format=json&include_appinfo=1"
+        let proxy = "https://cors-anywhere.herokuapp.com/";
+
         async function fetchData() {
             const res = await axios.get(proxy + uri);
             setGames(res.data.response.games);
@@ -42,17 +44,18 @@ const Games = () => {
             <div className="stats-row">
                 <Card>
                     <h4>Total Games</h4>
-                    <p>{games.length ? games.length : '...'}</p>
+                    <p>{games.length ? games.length : '-'}</p>
                 </Card>
                 <Card>
                     <h4>Hours Played</h4>
-                    <p>{hours ? hours : '...'}</p>
+                    <p>{hours ? hours : '-'}</p>
                 </Card>
                 <Card>
                     <h4>Most Played Game</h4>
-                    <p>{mostPlayed.name ? mostPlayed.name : 'None'}</p>
+                    <p>{mostPlayed.name ? mostPlayed.name : '-'}</p>
                 </Card>
             </div>
+            <GameList games={games} />
         </div>
     )
 }
